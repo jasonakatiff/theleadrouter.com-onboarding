@@ -1,0 +1,5 @@
+# Your private API key file — never committed or uploaded.
+.env
+
+# OS noise
+.DS_Store
