@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Getting Started · The Lead Router</title>
+<style>
+  @page { size: letter; margin: 0.7in 0.75in 0.75in 0.75in; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: #374151;
+    font: 12.5px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #fff;
+  }
+  h1 {
+    font-size: 28px;
+    line-height: 1.15;
+    color: #14532d;
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-size: 18px;
+    color: #14532d;
+    margin: 22px 0 10px;
+    page-break-after: avoid;
+  }
+  p { margin: 0 0 10px; }
+  .eyebrow {
+    color: #16a34a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+  }
+  a { color: #15803d; text-decoration: underline; }
+  .lede { color: #4b5563; }
+  .rule {
+    border: 0;
+    border-top: 1px solid #d1fae5;
+    margin: 18px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 4px;
+    font-size: 12.5px;
+    break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #d1d5db;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #ecfdf5; color: #14532d; font-weight: 700; }
+  ol { margin: 8px 0 10px; padding-left: 22px; }
+  ol li { margin: 0 0 6px; }
+  ol li::marker { color: #16a34a; font-weight: 700; }
+  ul { margin: 6px 0 10px; padding-left: 20px; }
+  ul li { margin: 0 0 6px; }
+  code, .pill {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 11.5px;
+    background: #ecfdf5;
+    color: #14532d;
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+  .codeblock {
+    background: #ecfdf5;
+    border-left: 3px solid #16a34a;
+    padding: 10px 12px;
+    margin: 8px 0 12px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+    color: #14532d;
+    break-inside: avoid;
+  }
+  .shot {
+    margin: 10px 0 14px;
+    text-align: left;
+    break-inside: avoid;
+  }
+  .shot img {
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+  }
+  .caption {
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 6px;
+  }
+  .sub { margin: 4px 0 8px; padding-left: 0; list-style: none; }
+  .sub li { margin: 0 0 4px; }
+  em { font-style: italic; }
+</style>
+</head>
+<body>
+  <p class="eyebrow">Getting started · theleadrouter.com</p>
+  <h1>Welcome to The Lead Router</h1>
+  <p class="lede">Set up a personal AI assistant that knows the platform inside and out and can work with your account for you. Four steps, no technical experience needed. This guide is also available online with clickable links at <a href="https://github.com/iscale-llc/theleadrouter.com-onboarding">github.com/iscale-llc/theleadrouter.com-onboarding</a>.</p>
+  <p>This is your getting-started kit for <a href="https://theleadrouter.com"><strong>The Lead Router</strong></a> — everything you need to set up a personal AI assistant that knows the platform inside and out and can work with your account for you.</p>
+  <p>You don't need to be technical. There are four steps, and each one is spelled out below. When you're done, you'll be able to ask your assistant things like <em>"How many leads came in yesterday, and where did they go?"</em> or <em>"Walk me through setting up a new campaign"</em> — and it will know how to answer, because this kit contains the full <span class="pill">user manual</span> and the complete API reference for <a href="https://theleadrouter.com">theleadrouter.com</a>.</p>
+
+  <hr class="rule" />
+  <h2>What you'll do</h2>
+  <table>
+    <thead><tr><th>Step</th><th>What</th><th>Time</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Get your API key from <a href="https://theleadrouter.com">The Lead Router</a></td><td>~2 min</td></tr>
+      <tr><td>2</td><td>Install <strong>Orca</strong> (the app your assistant lives in)</td><td>~5 min</td></tr>
+      <tr><td>3</td><td>Open <strong>this project</strong> inside Orca</td><td>~2 min</td></tr>
+      <tr><td>4</td><td>Give your assistant the API key</td><td>~1 min</td></tr>
+    </tbody>
+  </table>
+
+  <hr class="rule" />
+  <h2>Step 1 — Get your API key</h2>
+  <p>Your API key is what lets your assistant securely act on your Lead Router account. It's like a password, so treat it like one.</p>
+  <p><strong>This has to be a System key.</strong> A Partner key, a Buyer key, or a campaign posting key will not work — those are the keys people have used by mistake.</p>
+  <ol>
+    <li>Log in to your dashboard at <a href="https://theleadrouter.com">theleadrouter.com</a>.</li>
+    <li>In the left sidebar, go to <strong>System → API Keys</strong>. This is <strong>not</strong> Settings, and it is <strong>not</strong> the API Keys tab on a partner or buyer.</li>
+    <li>Click <strong>Create API Key</strong>. The form looks like this:</li>
+  </ol>
+  <div class="shot">
+    <img src="docs/create-api-key.png" alt="Create API Key dialog with Key Type System selected" />
+    <div class="caption">The name in the picture is just an example. The important choice is Key Type = System.</div>
+  </div>
+  <ol start="4">
+    <li>Match the screenshot:
+      <ul class="sub">
+        <li><strong>Key Name</strong> — anything you'll recognize, for example <strong>"Orca assistant"</strong></li>
+        <li><strong>Key Type</strong> — <strong>System</strong>. Leave Buyer and Partner unselected.</li>
+        <li><strong>Scopes</strong> — select <strong>admin</strong>, plus <strong>routing</strong>, <strong>messaging</strong>, <strong>calls</strong>, and <strong>calls_rtb</strong> if those pills are shown. There is no "all" shortcut.</li>
+        <li>Leave <strong>Allow billing operations</strong> unchecked</li>
+        <li>Leave <strong>Read-only key</strong> unchecked</li>
+        <li><strong>Allow PII access</strong> can stay on if you want the assistant to see real names, emails, and phones</li>
+      </ul>
+    </li>
+    <li>Click <strong>Create Key</strong>.</li>
+    <li><strong>Copy the key immediately and paste it somewhere safe</strong> (a note, a password manager). The full key is shown <strong>only once</strong> — if you lose it, you'll just create a new one, no harm done.</li>
+  </ol>
+  <p>Your key will look like <span class="pill">lr_</span> followed by a long string of letters and numbers. If it starts with <span class="pill">pk_</span>, that is a posting key — go back and mint a System key instead.</p>
+  <p><strong>Good to know:</strong></p>
+  <ul>
+    <li><strong>This key can never move money.</strong> Billing operations (credits, charges, subscriptions) require a separate special key that you are <em>not</em> creating here. Your assistant will be able to help run your account, but it is structurally incapable of touching billing.</li>
+    <li><strong>The key expires automatically after 90 days.</strong> That's a safety feature. When it expires, just repeat this step to make a new one.</li>
+    <li><strong>You can revoke it any time</strong> from the same <strong>System → API Keys</strong> page, and it stops working immediately.</li>
+  </ul>
+
+  <hr class="rule" />
+  <h2>Step 2 — Install Orca</h2>
+  <p>Orca is the desktop app where your AI assistant lives. It works on Mac, Windows, and Linux.</p>
+  <ol>
+    <li>Go to <a href="https://www.onorca.dev/">onorca.dev</a> and click the download button for your computer (on a Mac, pick <strong>Apple Silicon</strong> for newer Macs or <strong>Intel</strong> for older ones — if you're not sure, your Mac is probably Apple Silicon).</li>
+    <li>Open the downloaded file and install it like any other app.</li>
+    <li>Open Orca and sign in.</li>
+    <li>Orca works with an AI assistant subscription you bring — for example <strong>Claude</strong>. If you already have one, connect it when Orca asks. If you don't have one yet, <a href="https://claude.com">claude.com</a> is where to get a Claude subscription.</li>
+  </ol>
+
+  <hr class="rule" />
+  <h2>Step 3 — Open this project inside Orca</h2>
+  <p>This very page lives in a project folder that contains the user manual and API reference your assistant will read. You just need to open it in Orca.</p>
+  <ol>
+    <li>In Orca, look for <strong>Projects</strong> and choose the option to <strong>add / open a project from GitHub</strong>.</li>
+    <li>Paste in this project's address:</li>
+  </ol>
+  <div class="codeblock">https://github.com/iscale-llc/theleadrouter.com-onboarding</div>
+  <ol start="3">
+    <li>Orca will download the project and show it in your Projects list.</li>
+  </ol>
+  <p><em>Can't find the GitHub option?</em> You can also click the green <strong>Code</strong> button at the top of this page, choose <strong>Download ZIP</strong>, unzip it, and open that folder in Orca.</p>
+
+  <hr class="rule" />
+  <h2>Step 4 — Give your assistant the API key</h2>
+  <p>Last step: put the key you copied in Step 1 where your assistant can find it.</p>
+  <ol>
+    <li>In the project you just opened, find the file named <span class="pill">.env.example</span>.</li>
+    <li>Make a copy of it and name the copy <span class="pill">.env</span> (just <span class="pill">.env</span>, nothing before the dot). Your assistant can do this for you — just ask: <em>"copy .env.example to .env"</em>.</li>
+    <li>Open <span class="pill">.env</span> and paste your key after the equals sign, so it looks like:</li>
+  </ol>
+  <div class="codeblock">LEADROUTER_API_KEY=lr_your_key_here</div>
+  <ol start="4">
+    <li>Save the file. Done!</li>
+  </ol>
+  <p>The project is set up so the <span class="pill">.env</span> file <strong>stays private on your computer</strong> — it is never uploaded or shared, even if the project syncs with GitHub.</p>
+
+  <hr class="rule" />
+  <h2>You're ready — try asking</h2>
+  <p>Start a new assistant session in Orca inside this project and try:</p>
+  <ul>
+    <li><em>"Introduce yourself — what can you help me with on The Lead Router?"</em></li>
+    <li><em>"How many leads came in this week, and how many were sold?"</em></li>
+    <li><em>"Explain how offers, campaigns, and contracts fit together."</em></li>
+    <li><em>"Walk me through adding a new buyer, step by step."</em></li>
+    <li><em>"Show me my active campaigns."</em></li>
+  </ul>
+  <p>Your assistant reads the <span class="pill">full user manual</span> and the <span class="pill">complete API reference</span> in this project, and uses your API key to look things up in your live account at <a href="https://theleadrouter.com">theleadrouter.com</a>.</p>
+
+  <hr class="rule" />
+  <h2>What's in this project</h2>
+  <table>
+    <thead><tr><th>File</th><th>What it is</th></tr></thead>
+    <tbody>
+      <tr><td><span class="pill">README.md</span></td><td>This guide</td></tr>
+      <tr><td><span class="pill">getting-started.pdf</span></td><td>The same guide as a printable PDF</td></tr>
+      <tr><td><span class="pill">docs/user-manual.md</span></td><td>The complete Lead Router user manual — every page, setting, and workflow</td></tr>
+      <tr><td><span class="pill">api/openapi-full.yaml</span></td><td>The complete API reference (machine-readable — this is what your assistant uses)</td></tr>
+      <tr><td><span class="pill">AGENTS.md</span></td><td>Instructions your assistant reads automatically (how to use the key safely, when to ask before changing things)</td></tr>
+      <tr><td><span class="pill">.env.example</span></td><td>The template for your private key file (Step 4)</td></tr>
+    </tbody>
+  </table>
+
+  <hr class="rule" />
+  <h2>A few safety notes</h2>
+  <ul>
+    <li><strong>Never share your API key</strong> — not in email, not in chat, not in screenshots. Anyone with the key can act as you (except on billing, which is blocked).</li>
+    <li><strong>Your assistant is told to ask before changing anything important.</strong> It will confirm with you before deleting things or making changes that are hard to undo.</li>
+    <li>If anything ever feels off, <strong>revoke the key</strong> at <a href="https://theleadrouter.com">theleadrouter.com</a> under <strong>System → API Keys</strong> — takes effect instantly — and mint a fresh one.</li>
+  </ul>
+
+  <h2>Need help?</h2>
+  <p>Log in to <a href="https://theleadrouter.com"><strong>theleadrouter.com</strong></a> and check the built-in <strong>Help</strong> section, or reach out to your Lead Router contact. We're happy to walk you through any of this.</p>
+</body>
+</html>

@@ -23,15 +23,27 @@ You don't need to be technical. There are four steps, and each one is spelled ou
 
 Your API key is what lets your assistant securely act on your Lead Router account. It's like a password, so treat it like one.
 
-1. Log in to your dashboard at **[theleadrouter.com](https://theleadrouter.com)**.
-2. In the left sidebar, go to **System → API Keys**.
-3. Click **Create Key**.
-4. Give it a name you'll recognize later — for example, **"Orca assistant"**.
-5. Under scopes, choose **Admin (full dashboard)**.
-6. Click **Create**.
-7. **Copy the key immediately and paste it somewhere safe** (a note, a password manager). The full key is shown **only once** — if you lose it, you'll just create a new one, no harm done.
+**This has to be a System key.** A Partner key, a Buyer key, or a campaign posting key will not work — those are the keys people have used by mistake.
 
-Your key will look like `lr_` followed by a long string of letters and numbers.
+1. Log in to your dashboard at **[theleadrouter.com](https://theleadrouter.com)**.
+2. In the left sidebar, go to **System → API Keys**. This is **not** Settings, and it is **not** the API Keys tab on a partner or buyer.
+3. Click **Create API Key**. The form looks like this:
+
+   <p align="left">
+     <img src="docs/create-api-key.png" alt="Create API Key dialog. Key Type is System. Scopes admin, routing, messaging, calls, and calls_rtb are selected. Allow billing operations is off. Read-only is off. Allow PII access is on." width="420" />
+   </p>
+
+4. Match the screenshot:
+   - **Key Name** — anything you'll recognize, for example **"Orca assistant"** (the name in the picture is just an example)
+   - **Key Type** — **System**. Leave Buyer and Partner unselected.
+   - **Scopes** — select **admin**, plus **routing**, **messaging**, **calls**, and **calls_rtb** if those pills are shown. There is no "all" shortcut.
+   - Leave **Allow billing operations** unchecked
+   - Leave **Read-only key** unchecked
+   - **Allow PII access** can stay on if you want the assistant to see real names, emails, and phones
+5. Click **Create Key**.
+6. **Copy the key immediately and paste it somewhere safe** (a note, a password manager). The full key is shown **only once** — if you lose it, you'll just create a new one, no harm done.
+
+Your key will look like `lr_` followed by a long string of letters and numbers. If it starts with `pk_`, that is a posting key — go back and mint a System key instead.
 
 **Good to know:**
 
@@ -107,6 +119,7 @@ Your assistant reads the [full user manual](docs/user-manual.md) and the [comple
 |---|---|
 | [`README.md`](README.md) | This guide |
 | [`getting-started.pdf`](getting-started.pdf) | The same guide as a printable PDF |
+| [`docs/create-api-key.png`](docs/create-api-key.png) | Screenshot of the Create API Key form (Step 1) |
 | [`docs/user-manual.md`](docs/user-manual.md) | The complete Lead Router user manual — every page, setting, and workflow |
 | [`api/openapi-full.yaml`](api/openapi-full.yaml) | The complete API reference (machine-readable — this is what your assistant uses) |
 | [`AGENTS.md`](AGENTS.md) | Instructions your assistant reads automatically (how to use the key safely, when to ask before changing things) |
