@@ -26,6 +26,8 @@ You don't need to be technical. There are four steps, and each one is spelled ou
 > ```
 >
 > It asks whether you are a Lead Router customer and for your API key (do Step 1 first), then runs on its own for about 15 minutes. Safe to run again. The script is [`install.sh`](install.sh) in this project; maintainer notes are in [`installer/`](installer/README.md).
+>
+> **Already use Claude Code or Codex?** Skip the installer: clone this repo (or **Code → Download ZIP** above), copy `.env.example` to `.env` and paste your key after `LEADROUTER_API_KEY=` (Step 1), then open the folder in your tool and start a session. [`AGENTS.md`](AGENTS.md) and [`CLAUDE.md`](CLAUDE.md) tell the assistant how to use the key safely.
 
 ---
 
