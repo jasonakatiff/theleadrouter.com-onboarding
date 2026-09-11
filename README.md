@@ -17,6 +17,16 @@ You don't need to be technical. There are four steps, and each one is spelled ou
 | 3 | Open **this project** inside Orca | ~2 min |
 | 4 | Give your assistant the API key | ~1 min |
 
+> ### ⚡ On a Mac? Let the installer do Steps 2–4 for you
+>
+> Open the **Terminal** app, paste this one line, and press Return. It installs Orca and everything else, opens this project inside Orca, and puts your API key in the right place. The full step-by-step walkthrough, written for people who have never used Terminal, is at **[theleadrouter.com/install](https://theleadrouter.com/install)**.
+>
+> ```
+> curl -fsSL https://theleadrouter.com/install.sh | bash
+> ```
+>
+> It asks whether you are a Lead Router customer and for your API key (do Step 1 first), then runs on its own for about 15 minutes. Safe to run again. The script is [`install.sh`](install.sh) in this project; maintainer notes are in [`installer/`](installer/README.md).
+
 ---
 
 ## Step 1 — Get your API key
@@ -72,7 +82,7 @@ This very page lives in a project folder that contains the user manual and API r
 2. Paste in this project's address:
 
    ```
-   https://github.com/iscale-llc/theleadrouter.com-onboarding
+   https://github.com/jasonakatiff/theleadrouter.com-onboarding
    ```
 
 3. Orca will download the project and show it in your Projects list.
@@ -124,6 +134,7 @@ Your assistant reads the [full user manual](docs/user-manual.md) and the [comple
 | [`api/openapi-full.yaml`](api/openapi-full.yaml) | The complete API reference (machine-readable — this is what your assistant uses) |
 | [`AGENTS.md`](AGENTS.md) | Instructions your assistant reads automatically (how to use the key safely, when to ask before changing things) |
 | `.env.example` | The template for your private key file (Step 4) |
+| [`install.sh`](install.sh) | The one-line Mac installer (see the box at the top). Maintainer notes: [`installer/`](installer/README.md) |
 
 ---
 

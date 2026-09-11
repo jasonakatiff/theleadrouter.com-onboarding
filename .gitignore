@@ -3,3 +3,6 @@
 
 # OS noise
 .DS_Store
+
+# installer build output
+installer/dist/
