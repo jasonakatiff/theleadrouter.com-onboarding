@@ -121,7 +121,7 @@ Start a new assistant session in Orca inside this project and try:
 - *"Walk me through adding a new buyer, step by step."*
 - *"Show me my active campaigns."*
 
-Your assistant reads the [full user manual](docs/user-manual.md) and the [complete API reference](api/openapi-full.yaml) in this project, and uses your API key to look things up in your live account at [theleadrouter.com](https://theleadrouter.com).
+Your assistant reads the [full user manual](docs/user-manual.md) and the [complete API reference](api/openapi.yaml) in this project, and uses your API key to look things up in your live account at [theleadrouter.com](https://theleadrouter.com).
 
 ---
 
@@ -133,7 +133,7 @@ Your assistant reads the [full user manual](docs/user-manual.md) and the [comple
 | [`getting-started.pdf`](getting-started.pdf) | The same guide as a printable PDF |
 | [`docs/create-api-key.png`](docs/create-api-key.png) | Screenshot of the Create API Key form (Step 1) |
 | [`docs/user-manual.md`](docs/user-manual.md) | The complete Lead Router user manual — every page, setting, and workflow |
-| [`api/openapi-full.yaml`](api/openapi-full.yaml) | The complete API reference (machine-readable — this is what your assistant uses) |
+| [`api/openapi.yaml`](api/openapi.yaml) | The complete API reference (machine-readable — this is what your assistant uses) |
 | [`AGENTS.md`](AGENTS.md) | Instructions your assistant reads automatically (how to use the key safely, when to ask before changing things) |
 | `.env.example` | The template for your private key file (Step 4) |
 | [`install.sh`](install.sh) | The one-line Mac installer (see the box at the top). Maintainer notes: [`installer/`](installer/README.md) |

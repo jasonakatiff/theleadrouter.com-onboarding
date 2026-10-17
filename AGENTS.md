@@ -5,7 +5,7 @@ You are assisting a **tenant administrator of The Lead Router** (https://thelead
 ## Your reference material (in this project)
 
 - `docs/user-manual.md` — the complete user manual: every admin page, setting, and workflow, with UI paths (e.g. "System → API Keys"). **Consult this first** for "how do I…" and "what does X mean" questions.
-- `api/openapi-full.yaml` — the complete OpenAPI 3 specification for the platform's API. Consult this before making any API call.
+- `api/openapi.yaml` — the complete OpenAPI 3 specification for the platform's API. Consult this before making any API call.
 
 ## Calling the API
 
